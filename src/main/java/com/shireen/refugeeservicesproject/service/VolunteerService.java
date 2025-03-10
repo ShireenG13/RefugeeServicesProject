@@ -34,17 +34,16 @@ public class VolunteerService {
     public Volunteer updateVolunteer(Long id, Volunteer updatedVolunteer) {
         return volunteerRepository.findById(id)
                 .map(volunteer -> {
-                    volunteer.setFirstName(updatedVolunteer.getFirstName());
-                    volunteer.setLastName(updatedVolunteer.getLastName());
-                    volunteer.setDateOfBirth(updatedVolunteer.getDateOfBirth());
+                    volunteer.setFirst_name(updatedVolunteer.getFirst_name());
+                    volunteer.setLast_name(updatedVolunteer.getLast_name());
+                    volunteer.setDate_of_birth(updatedVolunteer.getDate_of_birth());
                     volunteer.setEmail(updatedVolunteer.getEmail());
                     volunteer.setPhone(updatedVolunteer.getPhone());
                     volunteer.setAddress(updatedVolunteer.getAddress());
                     volunteer.setAides(updatedVolunteer.getAides());
-                    volunteer.setDateOfBirth(updatedVolunteer.getDateOfBirth());
-                    volunteer.setContactName(updatedVolunteer.getContactName());
-                    volunteer.setContactRel(updatedVolunteer.getContactRel());
-                    volunteer.setContactPhone(updatedVolunteer.getContactPhone());
+                    volunteer.setEmergency_contact(updatedVolunteer.getEmergency_contact());
+                    volunteer.setRelationship(updatedVolunteer.getRelationship());
+                    volunteer.setContact_phone(updatedVolunteer.getContact_phone());
                     return volunteerRepository.save(volunteer);
                 })
                 .orElseThrow(() -> new RuntimeException("Volunteer not found"));

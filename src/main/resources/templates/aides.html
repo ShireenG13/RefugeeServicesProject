@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
+<!--    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />-->
+<!--    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative&family=Comfortaa&family=Geologica&family=Great+Vibes&family=Quicksand&family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+    <title>Refugee Services Home</title>
+</head>
+<body>
+<div>
+    <div class="banner">
+        <p>Welcome to Our Website!</p>
+    </div>
+
+    <!-- Header (Logo + Navbar) -->
+    <header class="header-container">
+        <div class="logo-container">
+            <a th:href="@{/home}">
+                <img th:src="@{./images/logo.png}" width="400" height="200" class="img-fluid"/>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/needhelp}">Need Help?</a></li>
+                <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+                <li><a th:href="@{/aides}">Services</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="serviceBanner">
+        <p style="color:var(--action-color)">Providing Support and Assistance for Refugees</p>
+    </div>
+
+    <h2>REFUGEE SUPPORT SERVICES</h2>
+    <table>
+        <tr>
+            <th>Service ID</th>
+            <th>Service Type</th>
+            <th>Service Description</th>
+            <th>Service Details</th>
+        </tr>
+        <tr>
+            <td>001</td>
+            <td>Medical Services</td>
+            <td>Access to healthcare facilities, free check-ups, and medical assistance.</td>
+            <td>Available at partnered clinics and hospitals.</td>
+        </tr>
+        <tr>
+            <td>002</td>
+            <td>Legal Services</td>
+            <td>Assistance with immigration paperwork, asylum applications, and legal counseling.</td>
+            <td>Pro bono legal aid provided by volunteer lawyers.</td>
+        </tr>
+        <tr>
+            <td>003</td>
+            <td>ESL Classes</td>
+            <td>English as a Second Language classes for refugees.</td>
+            <td>Available online and in community centers.</td>
+        </tr>
+        <tr>
+            <td>004</td>
+            <td>Grocery Deliveries</td>
+            <td>Weekly grocery deliveries for families in need.</td>
+            <td>Request-based delivery system operated by volunteers.</td>
+        </tr>
+        <tr>
+            <td>005</td>
+            <td>Carpooling</td>
+            <td>Transportation assistance for medical visits, job interviews, and essential trips.</td>
+            <td>Volunteer drivers provide scheduled pickups.</td>
+        </tr>
+        <tr>
+            <td>006</td>
+            <td>Items Needed List/Delivery or Pickup</td>
+            <td>Essential supplies such as clothing, furniture, and hygiene products.</td>
+            <td>Donors contribute, and items are delivered or picked up.</td>
+        </tr>
+        <tr>
+            <td>007</td>
+            <td>Emergency Services</td>
+            <td>Immediate assistance in case of emergencies, including shelter and crisis aid.</td>
+            <td>24/7 helpline available for urgent situations.</td>
+        </tr>
+    </table>
+
+    <div class="footer-container" style="height:100px;">
+        <div>
+            <p style="margin:0; padding-top:20px; padding-bottom:0; background-color: var(--secondary-color); height:100px; font-size:18px; color:var(--font-colorWhite);" > 🌍 Hope. Support. Community. 🌍
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

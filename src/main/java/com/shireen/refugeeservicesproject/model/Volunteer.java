@@ -21,16 +21,19 @@ public class Volunteer{
     private Long volunteerId;
 
     @Column(name="FirstName")
-    private String firstName;
+    private String first_name;
 
     @Column(name="LastName")
-    private String lastName;
+    private String last_name;
 
     @Column(name="DateOfBirth")
-    private Date dateOfBirth;
+    private Date date_of_birth;
 
     @Column(name="Email")
     private String email;
+
+    @Column(name="Password")
+    private String password;
 
     @Column(name="Phone")
     private String phone;
@@ -39,13 +42,13 @@ public class Volunteer{
     private String address;
 
     @Column(name="EmergencyContact")
-    private String contactName;
+    private String emergency_contact;
 
     @Column(name="Relationship")
-    private String contactRel;
+    private String relationship;
 
     @Column(name="ContactPhone")
-    private String contactPhone;
+    private String contact_phone;
 
     @OneToMany(mappedBy="volunteer",cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     private Set<Aide> aides =new HashSet<>();

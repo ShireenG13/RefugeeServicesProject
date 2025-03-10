@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
+<!--    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />-->
+<!--    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />-->
+
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative&family=Comfortaa&family=Geologica&family=Great+Vibes&family=Quicksand&family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="../css/wanttohelp.css"/>
+
+    <title>VOLUNTEER REGISTRATION</title>
+
+    <style>
+        .error-message {
+            color: #f0ad4e;
+            font-size: 12px;
+            margin-top: -15px;
+            margin-bottom: 10px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <div class="banner">
+        <p>Welcome to Our Website!</p>
+    </div>
+
+    <!-- Header (Logo + Navbar) -->
+    <header class="header-container">
+        <div class="logo-container">
+            <a href="../pages/home.html">
+                <img th:src="@{./images/logo.png}" width="400" height="200" class="img-fluid"/>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/needhelp}">Need Help?</a></li>
+                <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+                <li><a th:href="@{/aides}">Services</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="image-section">
+            <!-- You can add images here if needed -->
+        </div>
+
+        <div class="form-section">
+            <h1>SIGN UP TO<span style="color: var(--action-color)"> VOLUNTEER</span></h1>
+
+            <form id="signupForm" th:action="@{/saveVolunteer}" method="post" th:object="${volunteer}">
+                <input type="text" id="first_name" name="first_name"  placeholder="First Name" />
+                <div class="error-message" id="firstnameError">
+                    Please enter your first name.
+                </div>
+
+                <input type="text" id="last_name" name="last_name"  placeholder="Last Name" />
+                <div class="error-message" id="lastnameError">
+                    Please enter your last name.
+                </div>
+
+                <input type="date" id="date_of_birth" name="date_of_birth"  placeholder="Enter your Date Of Birth" />
+                <div class="error-message" id="dateofbirthError">
+                    Please enter a valid date.
+                </div>
+
+                <input type="email" id="email" name="email" th:value="*{email}" placeholder="Email Address" />
+                <div class="error-message" id="emailError">
+                    Please enter a valid email address.
+                </div>
+
+                <input type="tel" id="phone" name="phone" th:value="*{phone}" placeholder="Phone number" />
+                <div class="error-message" id="telError">
+                    Please enter a valid phone number.
+                </div>
+
+                <input type="password" id="password" name="password" th:value="*{password}" placeholder="Password" />
+                <div class="error-message" id="passwordError">
+                    Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.
+                </div>
+
+                <input type="text" id="address" name="address" th:value="*{address}" placeholder="Enter your Address" />
+                <div class="error-message" id="addressError">
+                    Please enter a valid address.
+                </div>
+
+                <input type="text" id="emergency_contact" name="emergency_contact"  placeholder="Emergency Contact Name" />
+                <div class="error-message" id="contactnameError">
+                    Please enter a valid name.
+                </div>
+
+                <input type="text" id="relationship" name="relationship"  placeholder="Emergency Contact Relationship" />
+                <div class="error-message" id="contactrelError">
+                    Please enter the Contact relationship.
+                </div>
+
+                <input type="tel" id="contact_phone" name="contact_phone"  placeholder="Emergency Contact Phone number" />
+                <div class="error-message" id="contacttelError">
+                    Please enter a valid phone number.
+                </div>
+
+                <label>
+                    <input type="checkbox" id="terms" name="terms" required /> I agree to the terms and conditions </label>
+                <div class="error-message" id="termsError" style="margin-top:15px">You must agree to the terms and conditions.</div>
+
+                <button type="submit" class="book-btn">Register</button>
+            </form>
+
+            <p>Already a member?... <a href="../pages/login.html">Sign in</a></p>
+        </div>
+    </div>
+
+    <div class="footer-container" style="height:100px;">
+        <div>
+            <p style="margin:0; padding-top:20px; padding-bottom:0; background-color: var(--secondary-color); height:100px; font-size:18px; color:var(--font-colorWhite);">
+                🌍 Hope. Support. Community. 🌍
+            </p>
+        </div>
+    </div>
+
+    <script src="../js/validation2.js"></script>
+</div>
+</body>
+</html>

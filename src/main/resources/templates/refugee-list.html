@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Refugee Hub</title>
+</head>
+<body>
+<h1>Refugee Hub</h1>
+
+<!--<form id="refugee-list" th:action="@{/refugee-list}" method="post">-->
+
+<!--    <a th:href="@{/refugee-list/update/{id}}"><button type="submit" class="book-btn">Edit</button></a>-->
+<!--    <a th:href="@{/refugee-list/delete/{id}}"><button type="submit" class="book-btn">Delete</button></a>-->
+<!--</form>-->
+<!--<a th:href="@{/employ/new}">List all Refugees</a>-->
+<table>
+    <thead>
+    <tr>
+        <th>Refugee First Name</th>
+        <th>Refugee Last Name</th>
+        <th>Email</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="refugee : ${refugees}">
+        <td th:text="${refugee.first_name}">First Name</td>
+        <td th:text="${refugee.last_name}">Last Name</td>
+        <td th:text="${refugee.email}">Email</td>
+        <td>
+                <a th:href="@{/refugee-list/update/{id}(id=${refugee.refugeeId})}">
+                <button type="button" class="book-btn">Edit</button></a>
+                <a th:href="@{/refugee-list/delete/{id}(id=${refugee.refugeeId})}">
+                <button type="button" class="book-btn">Delete</button></a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+
+
+<!--                <a th:href="@{/refugee-list/update/{id}(id=${refugee.id})}">-->
+<!--                <button type="button" class="book-btn">Edit</button></a>-->

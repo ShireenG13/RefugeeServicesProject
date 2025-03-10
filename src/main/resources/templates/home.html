@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" th:href="@{https://fonts.googleapis.com}">
+    <link rel="preconnect" th:href="@{https://fonts.gstatic.com}" crossorigin>
+<!--    <link rel="stylesheet" th:href="@{/node_modules/bootstrap/dist/css/bootstrap.min.css}" />-->
+<!--    <link rel="stylesheet" th:href="@{/node_modules/font-awesome/css/font-awesome.min.css}" />-->
+<!--    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-social/bootstrap-social.css}" />-->
+    <link rel="stylesheet" th:href="@{/css/home.css}" />
+
+    <title>Refugee Services Home</title>
+</head>
+<body>
+<div>
+    <div class="banner">
+        <p>Welcome to Our Website!</p>
+    </div>
+
+    <header class="header-container">
+        <div class="logo-container">
+            <a th:href="@{/home}">
+                <img th:src="@{/images/logo.png}" width="400" height="200" class="img-fluid"/>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/needhelp}">Need Help?</a></li>
+                <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+                <li><a th:href="@{/aides}">Services</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/refugee-list}">Refugee Hub</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="img-container">
+        <h1>WELCOME TO <span style="color:#e12117">REFUGEE CENTRAL</span></h1>
+        <div class="body-container container text-center mt-5">
+            <div class="text-container">
+                <p>At <span style="font-weight: bold; color:#e12117">Refugee Central</span>, we believe in providing safety, dignity, and a chance to rebuild lives.</p>
+            </div>
+            <div class="caption-container">
+                <h2>Providing</h2>
+                <h2>Hope,</h2>
+                <h2>Empowering </h2>
+                <h2>Lives.</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="navyblock-container">
+        <h1>WHO <span style="color:#e12117">WE</span> ARE</h1>
+        <div class="navy-textcontainer">
+            <p><span style="font-weight: bold; color:#e12117">Refugee Central</span> is dedicated to supporting those seeking refuge.</p>
+            <p><span style="font-weight: bold; color:#e12117">Our Mission </span> is to:</p>
+            <ul>
+                <li> <span style="color:#e12117">Provide essential resources</span> – food, housing, healthcare, and legal assistance.</li>
+                <li><span style="color:#e12117">Empower through education</span> – language classes, job training, and mentorship programs.</li>
+                <li><span style="color:#e12117">Foster community connections</span> – cultural integration, social support, and networking opportunities.</li>
+                <li><span style="color:#e12117">Advocate for refugee rights</span> – raising awareness and ensuring equal opportunities for all.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="img-container">
+        <div class="body-container container text-center mt-5">
+            <div class="caption-container">
+                <h1>WHAT</h1>
+                <h1><span style="color:#e12117">WE</span></h1>
+                <h1>DO</h1>
+            </div>
+            <div class="navy-textcontainer">
+                <p>These are some of the ways in which we help:</p>
+                <ul>
+                    <li> <span style="color:#e12117">Resettlement Support</span> – Guidance on housing, healthcare, and legal processes.</li>
+                    <li> <span style="color:#e12117">Employment & Education</span> – Job placement, skills training, and scholarship opportunities.</li>
+                    <li> <span style="color:#e12117">Language & Cultural Integration</span> – ESL classes and cultural exchange programs.</li>
+                    <li> <span style="color:#e12117">Mental Health & Wellness</span> – Counseling and emotional support.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <h1>JOIN <span style="color:#e12117">US</span></h1>
+        <p>Whether you are a refugee seeking assistance, a volunteer looking to make a difference, or a donor ready to contribute, <span style="font-weight: bold; color:#e12117">Refugee Central welcomes you.</span></p>
+        <p style="background-color: var(--secondary-color); height:100px; font-size:18px; color:var(--font-colorWhite);">🌍 Hope. Support. Community. 🌍</p>
+    </div>
+</div>
+</body>
+</html>

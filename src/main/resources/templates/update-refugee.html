@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="@{https://fonts.googleapis.com}">
+  <link rel="preconnect" href="@{https://fonts.gstatic.com}" crossorigin>
+  <!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
+  <!--    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />-->
+  <!--    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />-->
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative&family=Comfortaa&family=Geologica&family=Great+Vibes&family=Quicksand&family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+
+  <link rel="stylesheet" th:href="@{/css/needhelp.css}" />
+  <title>Update Refugee</title>
+  <style>
+    .error-message {
+      color: #f0ad4e;
+      font-size: 12px;
+      margin-top: -15px;
+      margin-bottom: 10px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+<div>
+  <div class="banner">
+    <p>Welcome to Our Website!</p>
+  </div>
+
+  <!-- Header (Logo + Navbar) -->
+  <header class="header-container">
+    <div class="logo-container">
+      <a href="../pages/home.html">
+        <img th:src="@{./images/logo.png}" width="400" height="200" class="img-fluid"/>
+      </a>
+    </div>
+
+    <nav class="navbar">
+      <ul class="navbar-nav">
+        <li><a th:href="@{/home}">Home</a></li>
+        <li><a th:href="@{/needhelp}">Need Help?</a></li>
+        <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+        <li><a th:href="@{/aides}">Services</a></li>
+        <li><a th:href="@{/contact}">Contact</a></li>
+        <li><a th:href="@{/login}">Login</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="container">
+    <div class="form-section">
+      <h1><span style="color: var(--action-color)">REGISTER</span> FOR ASSISTANCE</h1>
+
+    <form th:action="@{/refugee-list/update/{id}(id=${refugee.refugeeId})}" th:object="${refugee}" method="post">
+      <!-- Same form fields as 'register-assistance.html', but pre-filled with existing values -->
+
+      <input type="text" name="first_name" id="first_name" placeholder="First Name" />
+      <div class="error-message" id="firstnameError" th:if="${#fields.hasErrors('first_name')}">
+        Please enter your first name.
+      </div>
+
+      <input type="text"  name="last_name" id="last_name" placeholder="Last Name" />
+      <div class="error-message" id="lastnameError">
+        Please enter your last name.
+      </div>
+
+      <input type="text" id="date_of_birth" name="date_of_birth" placeholder="Enter your Date Of Birth" />
+      <div class="error-message" id="dateofbirthError">
+        Please enter a valid date.
+      </div>
+
+      <input type="email" th:field="*{email}" id="email" placeholder="Email Address" />
+      <div class="error-message" id="emailError" th:if="${#fields.hasErrors('email')}">
+        Please enter a valid email address.
+      </div>
+
+      <input type="tel" th:field="*{phone}" id="phone" placeholder="Phone number" />
+      <div class="error-message" id="telError" th:if="${#fields.hasErrors('phone')}">
+        Please enter a valid phone number.
+      </div>
+
+      <input type="password" th:field="*{password}" id="password" placeholder="Password" />
+      <div class="error-message" id="passwordError" th:if="${#fields.hasErrors('password')}">
+        Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.
+      </div>
+
+      <input type="text" th:field="*{address}" id="address" placeholder="Enter your Address" />
+      <div class="error-message" id="addressError" th:if="${#fields.hasErrors('address')}">
+        Please enter a valid address.
+      </div>
+
+      <input type="text"  id="country_of_origin" name="country_of_origin" placeholder="Enter Country of Origin" />
+      <div class="error-message" id="cooError" th:if="${#fields.hasErrors('country_of_origin')}">
+        Please enter a valid Country of Origin.
+      </div>
+
+      <input type="number"  id="family_count" placeholder="Enter Number of Family Members" />
+      <div class="error-message" id="familycountError">
+        Please enter a valid number.
+      </div>
+
+      <input type="text" th:field="*{area}" id="area" placeholder="Enter area of service" />
+      <div class="error-message" id="areaError" th:if="${#fields.hasErrors('area')}">
+        Please enter a valid area.
+      </div>
+
+      <label>
+        <input type="checkbox" id="terms" name="terms" required /> I agree to the terms and conditions </label>
+      <div class="error-message" id="termsError" style="margin-top:15px">You must agree to the terms and conditions.</div>
+
+      <button type="submit" class="book-btn">Update</button>
+    </form>
+      <script src="../js/validation.js"></script>
+      </div>
+  </div>
+</div>
+</body>
+</html>

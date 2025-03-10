@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import org.antlr.v4.runtime.misc.NotNull;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -24,14 +25,14 @@ public class Refugee {
 
     @NotNull
     @Column(name="FirstName")
-    private String firstName;
+    private String first_name;
 
     @NotNull
     @Column(name="LastName")
-    private String lastName;
+    private String last_name;
 
     @Column(name="DateOfBirth")
-    private Date dateOfBirth;
+    private LocalDate date_of_birth;
 
     @Column(name="Email")
     private String email;
@@ -40,14 +41,18 @@ public class Refugee {
     @Column(name="Phone")
     private String phone;
 
+    @NotNull
+    @Column(name="Password")
+    private String password;
+
     @Column(name="Address")
     private String address;
 
     @Column(name="CountryOfOrigin")
-    private String countryOfOrigin;
+    private String country_of_origin;
 
     @Column(name="FamilyCount")
-    private int familyCount;
+    private int family_count;
 
     @Column(name ="Area")
     private String area;

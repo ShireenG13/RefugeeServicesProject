@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <link rel="stylesheet" th:href="@{/node_modules/bootstrap/dist/css/bootstrap.min.css}" />-->
+<!--    <link rel="stylesheet" th:href="@{/node_modules/font-awesome/css/font-awesome.min.css}" />-->
+<!--    <link rel="stylesheet" th:href="@{/node_modules/bootstrap-social/bootstrap-social.css}" />-->
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+    <title>Refugee Services Login</title>
+    <style>
+        /* Your existing styles remain unchanged */
+    </style>
+</head>
+<body>
+<div>
+    <div class="banner">
+        <p>Welcome to Our Website!</p>
+    </div>
+    <header class="header-container">
+        <div class="logo-container">
+            <a th:href="@{/home}">
+                <img th:src="@{/images/logo.png}" width="400" height="200" class="img-fluid"/>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/needhelp}">Need Help?</a></li>
+                <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+                <li><a th:href="@{/services}">Services</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <h1>WELCOME TO <span style="color: var(--action-color)">REFUGEE CENTRAL.</span></h1>
+        <form th:action="@{/login}" method="post">
+            <h1>LOGIN</h1>
+            <label for="email"></label>
+            <input type="email" id="email" name="email" placeholder="Email" required />
+            <label for="password"></label>
+            <input type="password" id="password" name="password" placeholder="Password" required />
+            <br />
+            <button type="submit">Enter</button>
+            <br /><br />
+        </form>
+        <a th:href="@{/needhelp}" class="action-button">Register for assistance</a>
+        <a th:href="@{/wanttohelp}" class="action-button">Sign up to volunteer</a>
+    </div>
+    <div class="footer-container" style="height:100px;">
+        <div>
+            <p style="margin:0; padding-top:20px; background-color: var(--secondary-color); height:100px; font-size:18px; color:var(--font-colorWhite);">
+                🌍 Hope. Support. Community. 🌍
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
