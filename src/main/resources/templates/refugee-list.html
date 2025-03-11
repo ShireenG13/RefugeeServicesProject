@@ -1,10 +1,47 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>Refugee Hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!--    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />-->
+    <!--    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />-->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cinzel+Decorative&family=Comfortaa&family=Geologica&family=Great+Vibes&family=Quicksand&family=Roboto+Mono:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" th:href="@{/css/refugee-list.css}" />
+    <title>REFUGEE HUB</title>
 </head>
 <body>
-<h1>Refugee Hub</h1>
+
+<div>
+    <div class="banner">
+        <p>Welcome to Our Website!</p>
+    </div>
+
+    <!-- Header (Logo + Navbar) -->
+    <header class="header-container">
+        <div class="logo-container">
+            <a th:href="@{/home}">
+                <img th:src="@{./images/logo.png}" width="400" height="200" class="img-fluid"/>
+            </a>
+        </div>
+        <nav class="navbar">
+            <ul class="navbar-nav">
+                <li><a th:href="@{/home}">Home</a></li>
+                <li><a th:href="@{/needhelp}">Need Help?</a></li>
+                <li><a th:href="@{/wanttohelp}">Want To Help?</a></li>
+                <li><a th:href="@{/aides}">Services</a></li>
+                <li><a th:href="@{/contact}">Contact</a></li>
+                <li><a th:href="@{/login}">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<h1>REFUGEE HUB</h1>
 
 <!--<form id="refugee-list" th:action="@{/refugee-list}" method="post">-->
 
@@ -35,6 +72,7 @@
     </tr>
     </tbody>
 </table>
+</div>
 </body>
 </html>
 
