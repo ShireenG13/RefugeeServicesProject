@@ -72,7 +72,7 @@
                     Please enter your last name.
                 </div>
 
-                <input type="date" id="date_of_birth" name="date_of_birth"  placeholder="Enter your Date Of Birth" />
+                <input type="text" id="date_of_birth" name="date_of_birth"  placeholder="Enter your Date Of Birth" />
                 <div class="error-message" id="dateofbirthError">
                     Please enter a valid date.
                 </div>
@@ -87,12 +87,12 @@
                     Please enter a valid phone number.
                 </div>
 
-                <input type="password" id="password" name="password" th:value="*{password}" placeholder="Password" />
+                <input type="password" id="password" name="password"  placeholder="Password" />
                 <div class="error-message" id="passwordError">
                     Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.
                 </div>
 
-                <input type="text" id="address" name="address" th:value="*{address}" placeholder="Enter your Address" />
+                <input type="text" id="address" name="address" placeholder="Enter your Address" />
                 <div class="error-message" id="addressError">
                     Please enter a valid address.
                 </div>
@@ -131,7 +131,7 @@
         </div>
     </div>
 
-    <script src="../js/validation2.js"></script>
+    <script th:src="@{/javascript/validation2.js}"></script>
 </div>
 </body>
 </html>

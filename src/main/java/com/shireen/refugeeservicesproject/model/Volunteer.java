@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
@@ -27,7 +28,7 @@ public class Volunteer{
     private String last_name;
 
     @Column(name="DateOfBirth")
-    private Date date_of_birth;
+    private LocalDate date_of_birth;
 
     @Column(name="Email")
     private String email;

@@ -51,13 +51,15 @@
 
     <div class="container">
         <div class="image-section">
-            <!-- Optional Image Section -->
+            <div class="text-section">
+
+            </div>
         </div>
         <div class="form-section">
             <h1><span style="color: var(--action-color)">REGISTER</span> FOR ASSISTANCE</h1>
             <form id="signupForm" th:action="@{/saveRefugee}" th:object="${refugee}" method="post">
                 <input type="text" name="first_name" id="first_name" placeholder="First Name" />
-                <div class="error-message" id="firstnameError" th:if="${#fields.hasErrors('first_name')}">
+                <div class="error-message" id="firstnameError">
                     Please enter your first name.
                 </div>
 
@@ -71,28 +73,28 @@
                     Please enter a valid date.
                 </div>
 
-                <input type="email" th:field="*{email}" id="email" placeholder="Email Address" />
-                <div class="error-message" id="emailError" th:if="${#fields.hasErrors('email')}">
+                <input type="email"  id="email" name="email" placeholder="Email Address" />
+                <div class="error-message" id="emailError" >
                     Please enter a valid email address.
                 </div>
 
-                <input type="tel" th:field="*{phone}" id="phone" placeholder="Phone number" />
-                <div class="error-message" id="telError" th:if="${#fields.hasErrors('phone')}">
+                <input type="tel"  id="phone" name="phone" placeholder="Phone number" />
+                <div class="error-message" id="telError"  >
                     Please enter a valid phone number.
                 </div>
 
-                <input type="password" th:field="*{password}" id="password" placeholder="Password" />
-                <div class="error-message" id="passwordError" th:if="${#fields.hasErrors('password')}">
+                <input type="password"  id="password" name="password" placeholder="Password" />
+                <div class="error-message" id="passwordError" >
                     Password must be at least 8 characters long and contain at least one uppercase letter, one lowercase letter, and one digit.
                 </div>
 
-                <input type="text" th:field="*{address}" id="address" placeholder="Enter your Address" />
-                <div class="error-message" id="addressError" th:if="${#fields.hasErrors('address')}">
+                <input type="text" id="address" name="address" placeholder="Enter your Address" />
+                <div class="error-message" id="addressError" >
                     Please enter a valid address.
                 </div>
 
                 <input type="text"  id="country_of_origin" name="country_of_origin" placeholder="Enter Country of Origin" />
-                <div class="error-message" id="cooError" th:if="${#fields.hasErrors('country_of_origin')}">
+                <div class="error-message" id="cooError" >
                     Please enter a valid Country of Origin.
                 </div>
 
@@ -101,8 +103,8 @@
                     Please enter a valid number.
                 </div>
 
-                <input type="text" th:field="*{area}" id="area" placeholder="Enter area of service" />
-                <div class="error-message" id="areaError" th:if="${#fields.hasErrors('area')}">
+                <input type="text"  id="area" p name="area" placeholder="Enter area of service" />
+                <div class="error-message" id="areaError">
                     Please enter a valid area.
                 </div>
 
@@ -145,6 +147,6 @@
         </div>
     </div>
 </div>
-    <script src="../js/validation.js"></script>
+    <script th:src="@{/javascript/validation.js}"></script>
 </body>
 </html>

@@ -132,6 +132,8 @@ h2{
 }
 
 .navyblock-container{
+
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     width:100vw;
     height:100vh;
     background-color: var(--secondary-color);
@@ -155,10 +157,11 @@ h2{
 
 .caption-container {
     background-color: #969ead;
+    color: var(--font-colorBlack);
     margin: auto;
-    width:70%;
+    width:95%;
     height:100%;
-    align-items:center;
+    align-items:baseline;
 
 
     font-size: 18px;
@@ -172,14 +175,18 @@ h2{
 }
 
 .text-container{
-    background-color: #969ead;
+    /*background-color: #969ead;*/
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity:90%;
+    border: 2px solid black;
     margin:auto;
     width:100%;
     height:70%;
     align-items:center;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-    color: var(--font-colorBlack);
+    color: var(--font-colorWhite);
     font-weight:500;
     font-style:normal;
     font-weight:400;
@@ -189,20 +196,44 @@ h2{
 
 
 .navy-textcontainer {
-    background-color: #969ead;
+    background-color: var(--secondary-color);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    opacity:90%;
     border: 1px solid black;
     margin:auto;
     padding:20px;
-    width:80%;
+    width:90%;
     height:60%;
     align-items: center;
     justify-content:center;
     font-size: 18px;
     font-family: "Roboto", sans-serif;
-    color: var(--font-colorBlack);
-    font-weight:500;
+    color: var(--font-colorWhite );
+
     font-style:normal;
-    font-weight:400;
+    font-weight:200;
+    font-style: italic;
+    text-align: left;
+
+}
+
+.navy-textcontainer1{
+    background-color: #969ead;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border: 1px solid black;
+    margin:auto;
+    padding:20px;
+    width:90%;
+    height:60%;
+    align-items: center;
+    justify-content:center;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    color: var(--font-colorBlack );
+    solid-opacity: max(90, 90);
+
+    font-style:normal;
+    font-weight:200;
     font-style: italic;
     text-align: left;
 
