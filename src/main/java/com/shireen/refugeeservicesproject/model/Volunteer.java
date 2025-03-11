@@ -51,6 +51,9 @@ public class Volunteer{
     @Column(name="ContactPhone")
     private String contact_phone;
 
+    @Column(name="Role")
+    private String role;
+
     @OneToMany(mappedBy="volunteer",cascade=CascadeType.ALL, fetch=FetchType.LAZY)
     private Set<Aide> aides =new HashSet<>();
 

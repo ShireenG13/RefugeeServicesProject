@@ -54,8 +54,11 @@ public class Refugee {
     @Column(name="FamilyCount")
     private int family_count;
 
-    @Column(name ="Area")
+    @Column(name="Area")
     private String area;
+
+    @Column(name="Role")
+    private String role;
 
    @OneToMany(mappedBy="refugee", cascade={CascadeType.ALL}, fetch=FetchType.LAZY)
     private Set<Aide> aides = new HashSet<>();
